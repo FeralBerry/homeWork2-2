@@ -1,7 +1,5 @@
 package faculty;
 
-import java.io.IOException;
-
 public class Slytherin extends Student{
     private int cunning; // Хитрость
     private int determination; // Решительность
@@ -18,7 +16,7 @@ public class Slytherin extends Student{
         this.thirstForPower = checkParam(thirstForPower);
     }
     public int getCunning() {
-        return this.ambition;
+        return this.cunning;
     }
     public int getDetermination() {
         return this.determination;
@@ -32,9 +30,6 @@ public class Slytherin extends Student{
     public int getThirstForPower() {
         return this.thirstForPower;
     }
-    public int getNobility() {
-        return this.cunning;
-    }
     public String toString(){
         return super.toString() +
                 ", Хитрость: " + getCunning() +
@@ -42,5 +37,11 @@ public class Slytherin extends Student{
                 ", Амбициозность: " + getAmbition() +
                 ", Находчивость: " + getResourcefulness() +
                 ", Жажда власти: " + getThirstForPower();
+    }
+    public int comparisonOfStudents(){
+        return super.comparisonOfStudents() + getCunning() + getDetermination() + getAmbition() + getResourcefulness() + getThirstForPower();
+    }
+    public String bestStudent(){
+        return super.bestStudent() + " лучший ученик Слизерин.";
     }
 }

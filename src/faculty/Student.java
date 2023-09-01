@@ -1,7 +1,5 @@
 package faculty;
 
-import java.io.IOException;
-
 public class Student {
     private String name;
     private int transgress;
@@ -34,4 +32,12 @@ public class Student {
     public String toString(){
         return "Имя: "+getName()+", Сила: "+getPower()+", Трансгресия: "+getTransgress();
     }
+
+    public int comparisonOfStudents() {
+       return getTransgress() + getPower();
+    }
+    public String bestStudent(){
+        return getName();
+    }
+
 }

@@ -3,9 +3,9 @@ package faculty;
 import java.io.IOException;
 
 public class Gryffindor extends Student{
-    private int nobility;
-    private int honor;
-    private int bravery;
+    private int nobility; // Благородство
+    private int honor; // Честь
+    private int bravery; // Храбрость
     public Gryffindor(String name, int power,int transgress, int nobility, int honor, int bravery) {
         super(name,power,transgress);
         this.nobility = checkParam(nobility);
@@ -20,5 +20,14 @@ public class Gryffindor extends Student{
     }
     public int getNobility() {
         return this.nobility;
+    }
+    public String toString(){
+        return super.toString() +
+                ", Благородство: " + getBravery() +
+                ", Честь: " + getHonor() +
+                ", Храбрость: " + getNobility();
+    }
+    public String bestStudent(){
+        return super.bestStudent() + " лучший ученик Грифендор.";
     }
 }
